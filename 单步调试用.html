@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>页面布局</title>
+</head>
+<body>
+  <script>
+    function test(a, b){
+      console.log('a',a,'b',b);
+      return {
+        test: function(c) {
+          console.log('c =' + c)
+          return test(c,a);
+        }
+      }
+    }
+
+    // var a = test(100);a.test(101);a.test(102);
+    debugger
+    var b = test(200).test(201).test(202);
+    // var c = test(300).test(301);c.test(302);
+  </script>
+</body>
+</html>

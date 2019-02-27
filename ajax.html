@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function ajax(opt, options) {
+      var xhr = XMLHttpRequest ? new new XMLHttpRequest() : new window.ActiveXObject('Microsoft.XMLHTTP');
+      var data = opt.data,
+        url = opt.url,
+        type = opt.type.toUpperCase(),
+        dataArr = [];
+      for (k in data) {
+        dataArr.push = (k + '=' + data[k]);
+      }
+      if (type === 'GET') {
+        url = url + '?' + dataArr.join('&');
+        xhr.open(type, url.replace(/\?$/g, ''), true)
+        xhr.send();
+      }
+      xhr.onload = function () {
+        if (xhr.status === 200 || xhr.status === 304) {
+          
+        }
+      }
+
+    }
+  </script>
+</body>
+</html>

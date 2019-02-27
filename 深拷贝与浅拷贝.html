@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>深拷贝与浅拷贝</title>
+</head>
+<body>
+  <script>
+    //浅拷贝
+    const obj1 = {
+      name: 'vs',
+      family: {a:'父亲',b:'母亲',c:'妹妹'}
+    }
+
+    function copy_obj1 (o) {
+      let obj2 = {}
+      for(let i in o) {
+        if (o.hasOwnProperty(i)) {
+          obj2[i] = o[i]
+        }
+      }
+      return obj2
+    }
+    var newobj = copy_obj1(obj1);
+    console.log(newobj)
+    newobj.family.a = '父亲改'
+    newobj.name = 'vs改'
+    console.log(newobj)
+
+    //深拷贝
+    
+
+  </script>
+</body>
+</html>

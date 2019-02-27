@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>页面布局</title>
+</head>
+<body>
+  <script>
+    function test(a, b){
+      console.log('b',b);
+      return {
+        test: function(c) {
+          // console.log('c =' + c)
+          return test(c,a);
+        }
+      }
+    }
+
+    var a = test(100);a.test(101);a.test(102);  // undefined 100 100
+    var b = test(200).test(201).test(202);  //  undefined 200 201
+    var c = test(300).test(301);c.test(302);  // undefined 300 301
+    
+  </script>
+  <script>
+    var string = 'sss';
+    document.write('<scr' + 'ipt> console.log(string);arrfam([1]);console.log(num);</' + 'script>')
+  </script>
+  <script>
+    var num = 456;
+    function arrfam(arr) {
+      if (arr instanceof Array) {
+        console.log('is Array');
+      }else{
+        console.log('is string');
+      }
+    }
+    arrfam(string);
+    arrfam([string]);
+  </script>
+</body>
+</html>

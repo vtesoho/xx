@@ -8,7 +8,7 @@
       padding: 0;
       margin: 0;
     }
-    .layout article div{height:100px;}
+    .layout article div{min-height:100px;}
     .layout{margin-bottom:20px;}
   </style>
 </head>
@@ -28,6 +28,7 @@
       }
       .layout.float .center{
         background: yellow;
+        overflow: auto;
       }
     </style>
     <article class="left-right-center">
@@ -35,12 +36,17 @@
       <div class="right">&nbsp;</div>
       <div class="center">
         <h1>浮动解决方案</h1>
-        1.这是三栏布局中间部分
-        2.这是三栏布局中间部分
+        <p>1.优点是兼容性比较好</p>
+        <p>2.但是会脱离文档流，如果处理不好会导致其他问题。</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
       </div>
     </article>
   </section>
-  
+
   <section class="layout position">
     <style media="screen">
       .layout.position .left-right-center div{
@@ -68,8 +74,13 @@
       <div class="right">&nbsp;</div>
       <div class="center">
         <h1>绝对定位</h1>
-        1.这是三栏布局中间部分
-        2.这是三栏布局中间部分
+        <p>1.优点是快捷</p>
+        <p>2.已经脱离文档流，可使用性比较差，适合用来做活动类</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
       </div>
     </article>
   </section>
@@ -83,7 +94,6 @@
         display: flex;
       }
       .layout.flexbox .left{
-
         width: 300px;
         background: red;
 
@@ -101,11 +111,14 @@
       <div class="left">&nbsp;</div>
       <div class="center">
         <h1>flexbox</h1>
-        1.这是三栏布局中间部分
-        2.这是三栏布局中间部分
+        <p>1.flex是移动端最完美的方案，但是ie8以下不支持。</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
       </div>
       <div class="right">&nbsp;</div>
-      
     </article>
   </section>
 
@@ -134,8 +147,13 @@
       <div class="left">&nbsp;</div>
       <div class="center">
         <h1>table</h1>
-        1.这是三栏布局中间部分
-        2.这是三栏布局中间部分
+        <p>1.表格布局在历史上评价不高，缺点很多，优点是兼容性很好。</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+
       </div>
       <div class="right">&nbsp;</div>
     </article>
@@ -164,8 +182,12 @@
       <div class="left">&nbsp;</div>
       <div class="center">
         <h1>grid</h1>
-        1.这是三栏布局中间部分
-        2.这是三栏布局中间部分
+        <p>1.网格布局可以做很多复杂的事情，并且代码量非常少</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
+        <p>测试超出</p>
       </div>
       <div class="right">&nbsp;</div>
     </article>
