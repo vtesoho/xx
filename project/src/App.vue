@@ -1,23 +1,30 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view/>
+    {{ls.a}}{{ls.b}}
+    <div @click="editLs">xx</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      ls: {
+        a: 'a'
+      }
+    }
+  },
+  mounted () {
+    this.$set(this.ls, 'b', 0)
+  },
+  methods: {
+    editLs: function () {
+      this.ls.a = 'aaa'
+      this.ls.d = 'ddd'
+    }
+  }
+
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
